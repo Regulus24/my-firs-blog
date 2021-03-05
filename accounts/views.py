@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
@@ -8,7 +8,7 @@ def indexView(request):
 	
 @login_required
 def dashboardView(request):
-	return render(request,'dashboard.html')
+	return render(request,'index.html')
 
 def registerView(request):
 	if request.method == "POST":
